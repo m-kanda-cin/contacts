@@ -73,12 +73,12 @@ function route($path, $httpMethod){
                     case ['contactDelete', 'post']:
                             $methodName = 'contactDelete';
                             break;
-                case ['create_complete', 'get']:
+               /* case ['create_complete', 'get']:
                         $methodName = 'comp_disp';
                         break;
                 case ['edit', 'get']:
                         $methodName = 'edit_disp';
-                        break;
+                        break;*/
         
                 }
                 break;

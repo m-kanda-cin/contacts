@@ -126,7 +126,7 @@ class ContactController extends Controller
             }
     }
 
-    public function comp_disp(){
+    /*public function comp_disp(){
         if (!isset($_SESSION['access_complete']) || ($_SESSION['access_complete'] !== true)) {
             // 正常な導線からのアクセスでない場合はエラー処理
             header('Location: /contact/contact');
@@ -136,7 +136,7 @@ class ContactController extends Controller
             $this->view('contact/create_complete', ['session' => $_SESSION]); 
             
           }
-    }
+    }*/
 
     public function editContact(){
                 
@@ -228,11 +228,11 @@ class ContactController extends Controller
             // 正常な導線からのアクセスでない場合はエラー処理
             header('Location: /contact/contact');
             exit();
-          } else {
+          }/* else {
             unset($_SESSION['edit']);
             $this->view('contact/edit', ['session' => $_SESSION]); 
             
-          }
+          }*/
     }
 
     public function contactDelete(){
