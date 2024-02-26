@@ -126,17 +126,13 @@ class ContactController extends Controller
             }
     }
 
-    /*public function comp_disp(){
-        if (!isset($_SESSION['access_complete']) || ($_SESSION['access_complete'] !== true)) {
+    public function comp_disp(){
             // 正常な導線からのアクセスでない場合はエラー処理
+
             header('Location: /contact/contact');
             exit();
-          }  else {
-            unset($_SESSION['access_complete']);
-            $this->view('contact/create_complete', ['session' => $_SESSION]); 
-            
           }
-    }*/
+    
 
     public function editContact(){
                 
@@ -224,16 +220,12 @@ class ContactController extends Controller
     }
 
     public function edit_disp(){
-        if (!isset($_SESSION['id']) || ($_SESSION['id'] !== true)) {
             // 正常な導線からのアクセスでない場合はエラー処理
-            header('Location: /contact/contact');
-            exit();
-          }/* else {
-            unset($_SESSION['edit']);
-            $this->view('contact/edit', ['session' => $_SESSION]); 
+        //そもそもGETで来る時点でおかしいのでこれでOK
+            header('Location: /contact/contact'); 
             
-          }*/
-    }
+          }
+    
 
     public function contactDelete(){
         if(!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']){

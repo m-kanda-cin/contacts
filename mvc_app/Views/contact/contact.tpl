@@ -69,7 +69,7 @@
             <td>{$item->email|escape}</td>
             <td>{$item->body|escape|nl2br}</td>
             <td>
-            <form action="/contact/edit_page" method="post">
+            <form action="/contact/edit" method="post">
             <input type="hidden" name="id" value={$item->id}>
             <input type="hidden" name="csrf_token" value={$token|escape}>
             <button class="btn bg-primary my-2">編集</button>
